@@ -1,0 +1,38 @@
+@charset "utf-8";
+
+article{
+    width: 500px;
+    color: #333;
+    text-align: justify;
+}
+.red_color{
+    color: #f00;
+    font-size: 20px;
+}
+.blue_color{
+    color: #00f;
+    font-weight: bold;
+}
+.bold_class{
+    font-weight: bold;
+}
+.darkblue_color{
+    color: #00008b;
+}
+.star_size{
+    font-size: 20px;
+}
+.writer_class{
+    line-height: 15px;
+    color: #777;
+    font-size: 14px;
+}
+.event{
+    font-size: 12px;
+    background-color: #499ae6;
+    color: #fff;
+    border: 2px solid #3e61ac;
+}
+h2{
+    line-height: 0px;
+}

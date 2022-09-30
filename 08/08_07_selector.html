@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>08_07_selector_동위선택자</title>
+    <style>
+        /* 1. '+' 선택자 사용하기' */
+        ol>.first + li{
+            font-size: 20px;
+            color: #f00;
+        }
+        /* 2. '~' 선택자 사용하기 */
+        ol>.first ~ li{
+            font-style: italic;
+        }
+
+        /* 문. 첫번째 li태그 뒤에 있는 동생들 중에서 마지막 번째 li 선택 하여 서식 적용하기 배경색:노랑색 */
+        ol>.first ~ .last{
+            background-color: #ff0;
+        }
+
+        img{width: 48px;}
+        .gnb{
+            width: 80%;
+            height: 100%;
+            position: fixed;
+            top: 0px;
+            left: 100%;           
+            background-color: rgba(0, 0, 0, .7);
+            color: #fff;
+            transition: 0.3s;
+        }
+
+        /* 햄버거 메뉴를 클릭하면 체크박스 뒤에 있는.gnb가 선택되어 나오게 한다. */
+        #toggle:checked + .gnb{left: 20%;}
+        #foq{
+            width: 1200px;
+            margin: 0px auto;/* 바깥에 좌, 우 auto를 주면 박스가 화면중앙에 배치된다.*/
+        }
+        #faq>label{
+            border-top: 1px solid #ccc;
+            line-height: 40px;
+            display: block;
+        }
+        #faq>p{
+            line-height: 30px;
+            border-bottom: 1px solid #ccc;
+            display: none;
+        }
+        #q01, #q02, #q03, #q04, #q05, #q06, #q07, #q08, #q09, #q10{display: none;}
+        /* 질문 (label)을 클릭하면 #q01이 체크되면서 바로 뒤 동생 답변이 보이게 한다. */
+        #q01:checked + p, #q02:checked + p, #q03:checked + p, #q04:checked + p, #q05:checked + p,#q06:checked + p, #q07:checked + p, #q08:checked + p, #q09:checked + p, #q10:checked + p {display: block;}
+    </style>
+</head>
+<body>
+    <h2>08_07_selector_동위선택자</h2>
+    <p>동위선택자란? 부모요소의 아래 자식요소들의 관계(동일한 관계=형제)에서 시준을 정하고, 그 기준이 되는 요소의 바로 뒤나 뒤부터 나오는 모든요소를 선택하고자 할 때 사용한다.</p>
+    <ul>
+        <li>선택자1 + 선택자2 : 선택자1의 바로 뒤에 오는 선택자2를 선택한다.</li>
+        <li>선택자1 + 선택자2 : 선택자1의 뒤에 있는 요소들 중에서 선택자2를 선택한다.</li>
+    </ul>
+
+    <ol>
+        <li class="first">ol태그의 첫번째 자손입니다.</li>
+        <li>ol태그의 두번째 자손입니다.</li>
+        <li>ol태그의 세번째 자손입니다.</li>
+        <li>ol태그의 네번째 자손입니다.</li>
+        <li class="last">ol태그의 마지막 자손입니다.</li>
+    </ol>
+
+    <label for="toggle">
+        <img src="./images/hamburget.png" alt="메뉴">
+    </label>
+    <input type="checkbox" id="toggle">
+    <nav class="gnb">
+        스타벅스 내비게이션 박스
+    </nav>
+
+    <h3>2. chmall 고객센터 자주 묻는 질문 Top10</h3>
+    <article id="faq">
+        <label for="q01"> 1. 반품 신청은 어떻게 하나요?</label>
+        <input type="checkbox" id="q01">
+        <p>답변 - 배송 완료된 상품은 청약철회기간 내 교환/반품을 신청할 수 있습니다.</p>
+    </article>
+
+    <article id="faq">
+        <label for="q02"> 2. 주문을 취소하고 싶어요.</label>
+        <input type="checkbox" id="q02">
+        <p>답변 - 상품 배송시작 전에 앱을 통해 취소를 신청할 수 있습니다.</p>
+    </article>
+
+    <article id="faq">
+        <label for="q03"> 3. 리뷰는 어떻게 작성하나요?</label>
+        <input type="checkbox" id="q03">
+        <p>답변 - 리뷰 작성할 상품의 리뷰 작성 버튼을 선택해주세요.</p>
+    </article>
+
+    <article id="faq">
+        <label for="q04"> 4. 반품 시 별도 택배비가 부과되나요? </label>
+        <input type="checkbox" id="q04">
+        <p>답변 - 1. 반품 택배비가 무료인 경우<br>
+            - 수령한 상품이 파손/불량이거나 상품이 잘못배송된 경우
+            <br>
+            <br>
+            2. 반품 택배비가 고객 부담인 경우<br>
+            - 구입합 상품 상세설명의 교환/반품정보에 배송비 고객부담이라고 표기되어 있는 상품 중 고객변심에 의한 반품을 요청하는 경우</p>
+    </article>
+
+    <article id="faq">
+        <label for="q05"> 5. 원하는상품 방송시간을 문자로 받고 싶어요</label>
+        <input type="checkbox" id="q05">
+        <p>답변 - 방송알리미를 신청하시면, 방송시 카카오톡 알리미나 SMS로 안내 해드립니다!</p>
+    </article>
+
+    <article id="faq">
+        <label for="q06"> 6. 회원 탈퇴는 어떻게 하나요?</label>
+        <input type="checkbox" id="q06">
+        <p>답변 - CJ온스타일 PC 로그인 후 마이존 > [회원 탈퇴] 메뉴를 통해 고객님께서 직접 처리할 수 있습니다.</p>
+    </article>
+
+    <article id="faq">
+        <label for="q07"> 7. 배송지를 변경 할 수 있나요?</label>
+        <input type="checkbox" id="q07">
+        <p>답변 - 주문 후 배송지 변경이 필요할 경우, CJ온스타일 앱에서 직접 변경할 수 있습니다.</p>
+    </article>
+
+    <article id="faq">
+        <label for="q08"> 8. 교환 신청은 어떻게 하나요?</label>
+        <input type="checkbox" id="q08">
+        <p>답변 - 배송 완료된 상품은 청약철회기간 내 교환/반품을 신청할 수 있습니다.</p>
+    </article>
+
+    <article id="faq">
+        <label for="q09"> 9. CJ온스타일 앱(어플리케이션)은 어떻게 설치하나요?</label>
+        <input type="checkbox" id="q09">
+        <p>답변 - 사용하시는 스마트폰을 확인 후 CJ온스타일앱을 설치해보세요!</p>
+    </article>
+
+    <article id="faq">
+        <label for="q10"> 10. 결제수단 변경하려면 주문취소하고 재주문하나요?</label>
+        <input type="checkbox" id="q10">
+        <p>답변 - 상품을 취소하지 않고도 다른 결제수단으로 결제 변경이 가능합니다.<br>
+            - [CJ온스타일 로그인] > [마이존] > [주문/배송 조회] > [결제변경]<br>
+            : 당일 주문 건에 한하여 23시30분까지 신용카드로 결제변경이 가능합니다.<br>
+            <br>
+            - 신용카드 외 다른 결제수단으로 변경을 원하는 경우<br>
+            : 당사 고객센터(1644-2525)로 연락주시면 결제변경 도와드리겠습니다.</p>
+    </article>
+    
+</body>
+</html>

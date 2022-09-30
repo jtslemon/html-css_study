@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>06_05selector_그룹선택자</title>
+    <style>
+        header, main, footer{
+            background: #ccc;
+            width: 1200px; height: 300px;
+            margin: 0px auto;
+            text-align: center;
+        }
+        header > h1, main > h2, footer > h3{
+            color: #00f;
+            line-height: 150px;
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h2>06_05selector_그룹선택자</h2>
+    <p>그룹선택자(,)는 선택자를 모아 모아서 한꺼번에 적용하기 위한 선택자로서 공통서식을 주고자 할 때 사용.</p>
+    <p>사용법) A선택자, B선택자, C선택자</p>
+    <header>
+        <h1>헤더영역</h1>
+    </header>
+    <main>
+        <h2>메인영역</h2>
+    </main>
+    <footer>
+        <h3>푸터영역</h3>
+    </footer>
+</body>
+</html>

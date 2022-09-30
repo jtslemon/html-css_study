@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>07_06_link_selector(링크_반응) 선택자</title>
+    <style>
+        a:link{
+            color: #333;
+            text-decoration: none;
+        }
+        a:visited{
+            color: #333;
+        }
+        a:hover{
+            text-decoration: underline;
+            color: #00008b;
+            font-weight: bold;
+        }
+        #con01>a{
+            background-color: #000;
+            color: #fff;
+            font-size: 12px;
+            padding: 2px 4px; /*위, 아래 왼, 오른쪽*/
+            border: 1px solid #333;
+        }
+        #con01>a:hover{
+            background-color: #fff;
+            border: 1px solid #333;
+            color: #333;
+            text-decoration: none;
+        }
+        #con01>a:active{
+            background-color: #0df;
+            border: 1px solid #000;
+            color: #333;
+            text-decoration: none;
+        }
+        footer{
+            height: 100px;
+            background-color: #000;
+            text-align: center;
+            line-height: 100px;
+        }
+        footer>a{
+            background-color: #fff;
+            color: #000;
+            padding: 2px 4px;
+            border-radius: 10px;
+            font-size: 12px;
+        }
+        footer>a:hover{
+            background-color: #000;
+            color: #fff;
+            font-weight: bold;
+            border: 1px solid #fff;
+            text-decoration: none;
+        }
+        .box{
+            height: 100px;
+            font-weight: bold;
+            text-align: center;
+            line-height: 100px;
+            letter-spacing: -1.5px;
+        }
+        .box>a{
+            background-color: #000;
+            color: #fff;
+            padding: 12px;
+            border-radius: 9px;
+            font-size: 20px;
+        }
+        .box>a:hover{
+            background-color: #fff;
+            color: #000;
+            border: 0.5px solid #000;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+    </style>
+</head>
+<body>
+    <h2>07_06_link_selector(링크_반응) 선택자 p.143-144</h2>
+    <p>링크선택자와 반응선택자는 웹페이지와 웹페이지를 연결하기 위한 a요소 또는 이미지에 사용하기 위한 선택자로서 사용자가 클릭을 하고자 할 때 변경되는 서식, 마우스 오버시 서식등 다양한 방응에 따른 동작을 만들고자 할 때 사용한다.</p>
+
+    <h3>1. 링크선택자</h3>
+    <p>href속성을 가진 태그요소에 서식을 적용하기 위한 선택자로서 가상클래스(:)라고 한다.</p>
+    <ul>
+        <li>:link - 하이퍼링크가 걸린 a태그요소에 서식을 적용</li>
+        <li>:visited - 하이퍼링크가 걸린 a태그를 선택한 적이 있는 경우 서식을 적용</li>
+    </ul>
+
+    <a href="http://www.naver.com" title="네이버">네이버</a>
+    <a href="http://www.daum.net" title="다음">다음</a>
+    <a href="http://www.nate.com/" title="네이트">네이트</a>
+    <a href="http://www.google.co.kr" title="구글">구글</a>
+
+    <p>하이퍼링크는 기본적으로 파랑색, 밑줄로 표시되면 한번이상 클릭한 적이 있는 경우는 보라색, 밑줄로 표시된다.</p>
+    <p>링크선택자는 herf속성을 가진 태그요소만 선택해서 사용해도 된다.</p>
+
+    <h3>2. 반응선택자</h3>
+    <p>마우스로 사용자가 선택한 요소에 오버를 하였을 때 또는 클릭을 하였을 때 서식이 적용되는 선택자이다.</p>
+    <ul>
+        <li>:hover - 마우스로 해당하는 요소에 올리면 서식이 적용</li>
+        <li>:active - 마우스로 해당하는 요소를 누르고 있을 때 서식이 적용</li>
+    </ul>
+
+    <article id="con01">
+        <img src="./images/casper.jpg" alt="캐스퍼광고"><br>
+        <a href="#" title="자세히보기">자세히보기</a>
+        <a href="#" title="더보기">더보기</a>
+        <a href="#" title="닫기">닫기</a>
+    </article>
+
+    <footer>
+        <a href="#" title="로그인">로그인</a>
+        <a href="#" title="로그아웃">로그아웃</a>
+    </footer> 
+
+    <div class="box">
+        <a href="#" title="댓글 작성하기">댓글 작성하기</a>
+    </div>
+</body>
+</html>

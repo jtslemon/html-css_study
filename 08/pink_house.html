@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>실습예제 - 핑크하우스</title>
+    <style>
+        *{margin: 0px; padding: 0px;}
+        body{
+            font-family: '맑은고딕', Arial, sans-serif;
+            font-size: 12px;
+            color: #333;
+        }
+        table{
+            border-collapse: collapse;
+            width: 720px;
+            margin: 0px auto;
+        }
+        table th:first-child{width: 80px;}
+        table th:nth-child(2){width: 440px;}
+        table th:nth-child(3){width: 100px;}
+        table th:nth-child(4){width: 80px;}
+        table th:last-child{width: 80px;}
+
+        table th{
+            border-top: 3px solid #d864a8;
+            border-bottom: 1px solid #d864a8;
+            background-color: #ec93c7;
+            color: #fff;
+            text-transform: uppercase;
+            line-height: 30px;
+        }
+        table tbody tr{
+            border-bottom: 1px dashed #666;
+            line-height: 24px;
+            text-align: center;
+        }
+        table tbody tr td:first-child{
+            font-size: 14px;
+            color: #bbb;
+        }
+        table tbody tr td:nth-child(2){
+            text-align: left;
+            color: #40658f;
+        }
+        table tbody tr td:nth-child(3){
+            font-weight: bold;
+        }
+        table tbody tr td:nth-child(1n+4){
+            font-size: 10px;
+            color: #bbb;
+        }
+        table tbody tr:nth-child(2n){
+            background-color: #ffffdd;
+        }
+        table tfoot{
+            text-align: center;
+        }
+        table tfoot tr td input{
+            margin-top: 15px;
+        }
+        table tfoot tr td input:nth-child(2){
+            width: 130px;
+        }
+        table tfoot tr td input:nth-child(3){
+            width: 40px;
+            border: 1px solid #be4a8e;
+            border-radius: 3px;
+            font-size: 13px;
+            background-color: #d864a8;
+            color: #fff;
+        }
+        table tfoot tr td input:nth-child(3):active{
+            width: 40px;
+            background-color: #e0a2c7;
+        }
+        table tfoot tr td input:nth-child(4n+1){
+            margin-left: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <table>
+        <caption>공지사항</caption>
+        <thead>
+            <tr>
+                <th>NO.</th>
+                <th>SUBJECT</th>
+                <th>WRITER</th>
+                <th>DATE</th>
+                <th>HIT</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>7</td><td>[필독] 핑크 하우스 회원 혜택</td><td>관리자</td><td>05-29</td><td>3</td>
+            </tr>
+            <tr>
+                <td>6</td><td>[안내] 생일 축하 쿠폰 및 적립금 안내</td><td>관리자</td><td>05-29</td><td>2</td>
+            </tr>
+            <tr>
+                <td>5</td><td>[안내] 핑크 하우스 무료 배송 안내</td><td>관리자</td><td>05-29</td><td>1</td>
+            </tr>
+            <tr>
+                <td>4</td><td>[필독] 배송사 및 처리 확인</td><td>관리자</td><td>05-29</td><td>1</td>
+            </tr>
+            <tr>
+                <td>3</td><td>[필독] 카드 무이자 할부 행사 안내</td><td>관리자</td><td>05-29</td><td>1</td>
+            </tr>
+            <tr>
+                <td>2</td><td>[안내] 핑크 하우스 오프라인 매장 안내</td><td>관리자</td><td>05-29</td><td>1</td>
+            </tr>
+            <tr>
+                <td>1</td><td>[필독] 핑크 하우스 등급제 안내</td><td>관리자</td><td>05-29</td><td>2</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="5">
+                    <select>
+                        <option>제목</option>
+                        <option>제목 &#x002B; 줄거리</option>
+                        <option>줄거리</option>
+                        <option>작성자</option>
+                    </select>
+                    <input type="search">
+                    <input type="button" value="검색">
+                    <input type="radio" name="family" id="a"><label for="a"> and</label>
+                    <input type="radio" name="family" id="b"><label for="b"> or</label>
+                </td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>
