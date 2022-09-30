@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="ko">
+ <head>
+   <meta charset="utf-8">
+   <title>12.table(테이블)</title>
+   <style>
+     .t01{
+       width:300px;
+       border-collapse:collapse;
+       border:1px solid #333;
+     }
+     td, tr, th{border:1px solid #333;}
+
+    .t02{
+        width:700px;
+        border:1px solid blue;
+        border-collapse:collapse;
+    }
+    .t02 td, .t02 th{
+     border:1px solid blue;
+    }
+    .t_bgcolor{ background:yellow; }
+    .t_bgcolor01{background:#ccc;}
+   </style>
+ </head>
+ <body>
+   <h2>12.table(테이블)</h2>
+   <p>테이블 태그는 표를 만들기 위한 태그로서 table, tr(줄, 행), td(칸, 셀), th(셀제목, table header), caption(설명, 제목)태그로 구성되어 있다.</p>
+   <p>테이블 태그를 활용하여 로그인, 달력, 회원가입, 약관동의, 예매하기, 문의하기, 게시판, 주문하기 등의 콘텐츠 페이지 작성시 사용된다.</p>
+  
+   <h3>1. 테이블 태그의 기본구성</h3>
+    <table class="t01">
+      <caption>표제목이나 설명문구</cation>
+      <tr>
+        <th>셀제목</th><th>셀제목</th><th>셀제목</th>
+      </tr>
+      <tr>
+        <td>셀내용</td><td>셀내용</td><td>셀내용</td>
+      </tr>
+    </table>
+   
+    <p>th는 제목셀이기 때문에 굵게, 가운데 정렬되는 특징이 있다.</p>
+
+   <h3>2. 테이블 셀병합하기 - 가로(colspan), 세로(rowspan)</h3>
+    <table  border="1" width="300">
+      <caption>가로셀 병합하기</cation>
+      <tr>
+        <td colspan="2">셀내용</td>
+      </tr>
+      <tr>
+        <td>셀내용</td><td>셀내용</td>
+      </tr>
+    </table>
+<br>
+    <table border="1" width="300">
+      <caption>세로셀 병합하기</cation>
+      <tr>
+        <td rowspan="2">셀내용</td><td>셀내용</td>
+      </tr>
+      <tr>
+        <td>셀내용</td>
+      </tr>
+    </table>
+
+  <h3>4. 웹표준/웹접근성 테이블 만들기</h3>
+  <dl>
+    <dt>웹표준과 웹접근성</dt>   
+    <dd>웹표준은 웹에서 표준적으로 사용되는 기술의 총칭을 말하며, 대표적인 웹표준 기술은 html5, css3이다. 검사방법 : 1. html마크업 검사, 2. css유효성 검사, 3. 크로스브라우징</dd>
+    <dd>웹접근성은 누구나(장애인, 노약자, 어린아이, 임신부) 불편함이 없이 웹사이트 접근하고 콘텐츠를 편하게 이용할 수 있도록 하는 접근방법.</dd>
+  </dl>
+
+  <table class="t02">
+    <caption>3학년 1학기 중간고사 성적현황</caption>
+    <thead>
+    <tr>
+      <th class="t_bgcolor">성명</th>
+      <th class="t_bgcolor">국어점수</th>
+      <th class="t_bgcolor">수학점수</th>
+      <th class="t_bgcolor">영어점수</th>
+      <th class="t_bgcolor">합계</th>
+    </tr>
+    </thead>
+    
+   <tfoot>
+    <tr>
+       <td class="t_bgcolor01">합계</td>
+       <td class="t_bgcolor01">275</td>
+       <td class="t_bgcolor01">190</td>
+       <td class="t_bgcolor01">170</td>
+       <td class="t_bgcolor01">&nbsp;</td>
+    </tr>
+   </tfoot>
+
+    <tbody>
+    <tr>
+      <td>홍길동</td><td>90</td><td>80</td><td>70</td><td>240</td>
+    </tr>
+    <tr>
+      <td>이순신</td><td>85</td><td>60</td><td>70</td><td>215</td>
+    </tr>
+    <tr> 
+      <td>강감찬</td><td>100</td><td>50</td><td>30</td><td>180</td>
+    </tr>
+   </tbody>
+  </table>
+
+ <p>thead, tbody, tfoot 태그를 사용하여 표의 영역을 지정해주며, tbody와 tfoot영역의 위치를 변경하여 시각장애인분들이 음성낭독기를 이용하여 결과 내용을 먼저 이해하고 건너뛸 수 있는 방법을 설정한다.</p>
+ 
+ </body>
+</html>
+
+
+

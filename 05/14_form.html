@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="ko">
+ <head>
+   <meta charset="utf-8">
+   <title>14_form(폼양식을 위한 태그)</title>
+ </head>
+ <body>
+   <h2>14_form(폼양식을 위한 태그)</h2>
+   <p>폼 태그란? 사용자가 입력한 정보(아이디, 패스워드 등)를 서버로 전송하는 역할을 하며, 폼태그를 활용한 양식의 종류에는 로그인폼, 회원가입폼, 검색폼, 예약폼 등의 다양한 양식을 만들 수 있다.</p>
+   <p>양식을 만들때는 form태그로 묶어서 작성하며, name(폼이름), method(전송방법), action(받을 서버주소)속성이 들어간다.</p>
+  
+ <form name="" action="" method="">
+   <h3>1. 폼그룹의 지정과 폼제목 설정하기</h3>
+    <fieldset>
+      <legend>양식그룹의 제목</legend>
+      <p>폼양식을 만들다 보면 다양한 내용이 들어갈때 영역별 구분을 하기 위함이고, fieldset태그는 테두리가 나오는 특징이 있다.</p>
+    </fieldset>
+
+    <fieldset>
+      <legend>로그인 폼</legend>
+      아이디 : <input type="text"><br>
+      패스워드 : <input type="password"><br>
+    </fieldset>
+
+    <h3>2. 폼태그의 종류들</h3>
+    <p>1. text박스 : 한글, 영문자를 입력하고자 할 때 사용하는 양식이며, 양식태그중에 가장 많이 사용하는 태그이다.</p>
+    <input type="text" maxlength="16">
+
+    <p>2. password박스 : 패스워드, 주민번호, 인증번호 등 보안을 요구하는 내용을 입력하고자 할 때 사용하는 양식이며 글자가 보이지 않도록 '기호'로 표시된다.</p>
+    <input type="password" maxlength="16">
+
+    <p>3. 라디오버튼 : 여러개의 항목중에 하나만 선택이 가능한 양식으로서 name속성을 사용해야 하나만 선택이 가능하다.</p>
+    <input type="radio" name="family" id="a"><label for="a">남</label>
+    <input type="radio" name="family" id="b"><label for="b">여</label>
+   <p>라디오 버튼을 클릭시에만 선택이 되는데 클릭을 좀더 편하게 하기 위해 접근성을 높일 필요가 있다. 그래서 label태그에 for속성을 사용하고 input태그에 id명으로 연결해주면 문자를 클릭해도 선택이 된다. 모바일 화면에서 편하게 선택이 되도록 함.</p>
+  
+   <p>4. 체크박스(여러개의 항목들 중에서 사용자가 원하는 항목만 선택할 수 있는 양식)</p>
+   나의 취미 : 
+        <input type="checkbox" id="c01"><label for="c01">컴퓨터</label>
+        <input type="checkbox" id="c02"><label for="c02">게임</label>
+        <input type="checkbox" id="c03"><label for="c03">독서</label>
+        <input type="checkbox" id="c04"><label for="c04">기타</label>
+
+   <p>5. 선택목록 : 쇼핑몰 옵션선택, 전화번호입력 통신사 선택, 예매목록, 인원수, 언어설정, 패밀리사이트 등의 양식을 만들고자 할 때 사용하는 양식.</p>
+   <select>
+     <option>언어설정</option>
+     <option>한국어</option>
+     <option>영어</option>
+     <option>일본어</option>
+   </select>
+
+  <p>6. 다중텍스트 박스 - 한줄입력이 아닌 여러줄의 내용을 입력하고자 할 때 사용.(한줄평 쓰기, 댓글쓰기, 메일쓰기, 글작성, 문의하기.....</p>
+  <textarea cols="50" rows="10">
+       이곳에 내용을 작성합니다.
+  </textarea>
+
+  <p>7. 파일첨부 - 게시판이나 이메일 양식에서 상대방에서 파일을 첨부하여 보내기 위한 양식</p>
+  <input type="file">
+
+   <p>8. 버튼 - 전송하기(보내기), 취소하기, 일반버튼, 이미지버튼</p>
+   <input type="submit" value="확인">
+   <input type="reset" value="취소">
+   <input type="button" value="일반버튼">
+   <input type="image" src="./images/facebook_btn.jpg">
+	
+ </form>
+
+ </body>
+</html>
+
+
+
+
+

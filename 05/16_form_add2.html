@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="ko">
+ <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, inttial-scale=1">
+  <title>16. 추가품속성</title>
+ </head>
+ <body>
+  <h2>16. 추가품속성</h2>
+
+  <h3>1. required - 폼양식중에서 반드시 입력해야하는 양식에 정용하며 필수 입력이라고도 함.</h3>
+  <form name="폼이름" method="전송방식" action="받을 서버주소">
+   <fieldset>
+    <legend>추가품속성</legend>
+    <label>*아이디 : </label><input type="text"><br>
+    <label>*패스워드 : </label><input type="password"><br>
+    <input type="submit" value="로그인">
+   </fieldset>
+
+  <h3>2. placeholder : 각 필드항목에 대한 입력형식 힌트를 제공해주는 속성</h3>
+  <fielset>
+   <legned>검색 폼</legned>
+   <input type="search" placeholder="가나 나다라마바 사아자"><iput type="button" value="검색">
+  </fielset>
+
+  <h3>3. autofocus : 페이지가 로딩되었을 때 포커스가 설정된 항목에 커서가 위치하도록 함. 주로 웹사이트의 자주 사용하는 콘텐츠에 초점을 맞추는 경우가 많은데 검색가이트(네이버, 다음, 구글)의 경우는 검색창에 초점을 맞춘다.</h3>
+  <fielset>
+   <legned>검색 폼</legned>
+   <input type="search" placeholder="차카 타파하가나 다라마" autofocus>
+   <iput type="button" value="검색">
+  </fielset>
+
+  <h3>4. disabled와 readonly : 서식을 사용불가능하게 하는 속성(disabled), 선택하지 않고 일기만 가능한 속성(teadonly)</h3>
+  <input type="button" value="이전">
+  <input type="button" value="다음" disabled>
+  <input type="text" value="내국인" readonly>
+
+  <h3>5. </h3>
+  </form>
+ </body>
+</html>

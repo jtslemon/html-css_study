@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="ko">
+ <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, inital-scale=1">
+  <title>html5추가 폼태그와 속성</title>
+  <style>
+   .id_word, .password_word{display:none;}
+  </style>
+  <script>
+   function bar_action(){
+    document.getElementById('bar').value='80';
+   }
+  </script>
+ </head>
+ <body>
+  <h2>html5추가 폼태그와 속성</h2>
+  <p>html5에서 추가된 폼태그와 속성들은 현재 사용하고 있는 브라우저 (크롬, 사파리, 오페라, msedge, 웨일 ,스윙, 파이어폭스..... 기타)에서 버전별로 지원을 하고 있기 때문에 지원상황을 확인하고 사용해야 한다. https://caniuse.com/(브라우저 버전별 태그 지원 유무 확인 사이트)</p>
+  <form name="폼양식" action="받을 서버주소" method="보낼방법">
+   <h3>1. 폼양식 그룹을 지정하기 위한 요소 - fieldset, legend</h3>
+  
+   <fieldset>
+    <legend>필수입력정보</legend>
+    <label for="id" class="id_word">아이디</label><input type="text" placeholder="아이디">
+    <label for="password" class="password_word">패스워드</label><input type="password" placeholder="패스워드">
+   </fieldset>
+
+   <fieldset>
+    <legend>선택입력정보</legend>
+    <label for="address">주소 : </label><input type="text" placeholder="예)도로명 주소 000길 00">
+    <label for="email">이메일 : </label><input type="email" placeholder="id@도메인.com or co.kr">
+   </fieldset>
+   <p>placeholder 속성 : 사용자가 입력할 내용을 미리 알려주어 오류가 나지 않도록 방지해줌. 웹접근성 측명에서 도움이 많이 됨.</p>
+
+
+   <h3>2. search : 사용자가 입력양식에 키워드를 입력하여 검색할 수 있도록 하고자 할 때 사용하는 양식으로서 단어를 입력하면 오른쪽 끝에 'X'표시가 뜨며 클릭 시 내용이 삭제되는 양식</h3>
+   <input type="search" placeholder="검색어를 입력해주세요."><input type="button" value="검색">
+
+
+   <h3>3. email : 이메일 주소를 입력하기 위한 박스로서 입력양식이 맞지 않을 경우 에러가 난다.</h3>
+   <input type="email" placeholder="id@도메인.com or co.kr">
+   <input type="submit" value="확인">
+
+
+   <h3>3. url : 사용자가 도메인 주소를 입력할 수 있도록 하는 양식이며, 주소형식이 맞지 않을 경우 에러메세지가 나온다.</h3>
+   <label>주소를 입력하세요 : </label><input type="url" placeholder="http://도메인.com or co.kr">
+   <input type="submit" value"="확인">
+
+
+   <h3>5. tel : 전화번호를 입력하기 위한 양식(모바일)</h3>
+   <input type="tel">
+
+
+   <h3>6. number : 숫자를 입력하기 위한 박스로 직접입력하거나 화살표로 설정이 가능</h3>
+   <input type="number" min="1" max="20" step="1" value="1">
+
+
+   <h3>7. range : 숫자범위를 슬라이드바로 조정</h3>
+   <input type="range">
+
+
+   <h3>8. date : 년, 월, 일을 선택하기 위한 요소로서 클릭시 달력창이 활성화됨.</h3>
+   <input type="date">
+
+
+   <h3>9. datetime : 년, 월, 일, 시, 분까지 선택하기 위한 요소로서 html5에서 없어졌다가 5.1부터 다시 사용</h3>
+   종료 날짜 : <input type="datetime" value="2022-11-25">
+
+
+   <h3>10. month : 년과 월만 선택하는 요소</h3>
+   <input type="month">
+
+
+   <h3>11. week : 연도와 주를 선택하는 요소</h3>
+   <input type="week">
+
+
+   <h3>12. time : 시, 분을 선택하는 요소</h3>
+   <input type="time">
+
+
+   <h3>13. color : 색상을 선택하기 위한 요소</h3>
+   <input type="color">
+
+
+   <h3>14. progress : 진행 정도를 나타내는 바를 만드는 태그로서 max, value속성을 사용한다.</h3>
+   <div><progress value="20" max="100"></progress></div>
+
+   <div><progress value="20" max="200"></progress></div>
+
+  </form>
+  <div><progress value="20" max="200" id='bar'></progress><div>
+  <button onclick="bar_action()">클릭하세요</button>
+
+<br>
+
+  <a href="tel:01065544772" title="통화하기">통화하기</a>
+  <a href="sms:01065544772" title="SMS보내기">SMS문자 보내기</a>
+ </body>
+</html>

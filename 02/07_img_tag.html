@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="ko">
+ <head>
+  <meta charset="utf-8">
+  <title>07_img(이미지 태그</title>
+ </head>
+ <body>
+    <h2>07_이미지 삽입태그</h2>
+   <p>웹문서에서 사용하는 이미지의 종류로는 .jpg(고화질), png(고화질, 로고, 아이콘, 투명배경이미지), gif(단순한 컬러의 이미지나 움직이는 이미지, 아이콘), bmp, webp, svg의 종류가 있다.</p>
+   <p>이러한 이미지 종류들을 웹문서에 삽입하기 위한 태그요소가 img태그이며, source의 약자인 'src'속성과 이미지가 나오지 않을 때 대체할 문자인 'alt'속성을 사용한다.</p>
+   <p>작성법) img src="삽입할 이미지의 주소나 경로" alt="이미지가 나오지 않을때 대체 할 문구"</p>
+
+  <h3>1. 이미지 삽입하기</h3>
+
+   절대주소를 사용하여 이미지 삽입하기
+  <img src="https://t1.daumcdn.net/daumtop_chanel/op/20200723055344399.png" alt="다음로고">
+  <br>
+   상대주소를 사용하여 이미지 삽입하기
+  <img src="./images/daum_logo.png" alt="다음로고">
+
+   <p>URL - Uniform Resource Locator의 약자로서 웹서버에 올라간 파일, 문서의 정확인 경로나 주소, 위치를 말함.</p>
+   <p>상대주소 : html문서가 있는 곳이 기준이 되며, 하위에 img폴더가 있을 경우 하위폴더(./폴더명/파일명.확장자)가 된다. 이미지가 다른 폴더에 있을 경우 '../폴더명/파일명.확장자'로 작성한다.</p>
+   <p>절대주소 : https://나 http://로 시작하여 '폴더명/파일명.확장자'로 끝나는 주소를 말함.</p>
+
+   <img src="auction_logo.gif" alt="옥션로고">
+   <br>
+   <img src="../1일차수업/google.png" alt="구글로고" width="300">
+
+   <h3>2. 이미지 나오지 않을 때 대신해서 나오는 설명문구 - alt</h3>
+   <p>alt : alternate text의 약자로서 이미지가 나오지 않거나 응답이 없을 때 이미지를 대신해서 표시할 문구이다. 사용자가 혼란스럽지 않게 하기 위해서이며, 시각장애인이 이미지를 이해할 수 있는 언어이기도 하다. 음성낭독기를 사용하면 이미지의 alt속성의 글자를 읽어준다. 웹접근성 규칙중의 하나이다.</p>
+
+   <img src="./images/banner.jpg" alt="월드컵 배너"><br>
+   <img src="./images/bann.jpg" alt="월드컵 배너">
+
+  <h3>3. 이미지 삽입시 캡션문구 활용하기 - figure, figcaption</h3>
+   <figure>
+     <img src="./images/photo.jpg" alt="서울 물난리">
+     <figcaption>서울에 집중호우가 내린 8일 밤 서울 강남구 대치동 한 아파트 주차장이 물에 잠겨 있다. 〈사진=연합뉴스〉</figcaption>
+   </figure>
+
+
+ </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

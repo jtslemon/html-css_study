@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="ko">
+ <head>
+  <meta charset="utf-8">
+  <style>
+   .table_01{
+    width:900px;
+    height:250px;
+    border-collapse:collapse;
+    border-top: 2px solid #333;
+   }
+   td, th {border-bottom: 1px solid #ccc;}
+   th{background-color : #eee;}
+   td {padding-left: 10px;}
+   .btn01{color: #fff; background-color: purple; padding: 6px 10px;
+    border: none
+   }
+  </style>
+ </head>
+ <body>
+  <form name="분양신청서" method="post" action="a.php">
+   <table class="table_01">
+    <caption>분양신청서</cation>
+    <tr>
+     <th>* 성명</th>
+     <td colspan="2"><input type="text" style="width: 80px;"></td>
+    </tr>
+    <tr>
+     <th>* 주소</th>
+     <td colspan="2">
+      <select style="width: 100px;">
+       <option>시/도</option>
+      </select>
+      <select>
+       <option>군/구</option>
+      </select>
+      <select>
+       <option>읍/면/동</option>
+      </select>
+     </td>
+    </tr>
+
+    <tr>
+     <th>* 휴대폰 번호</th>
+     <td colspan="2">
+      <select style="width: 70px; height: 21px;">
+       <option>010</option>
+      </select>
+       - <input type="text" style="width: 70px;">
+       - <input type="text" style="width: 70px;">
+     </td>
+    </tr>
+
+    <tr>
+     <th>* 분양현장명</th>
+     <td colspan="2">
+      <select style="width: 320px;">
+       <option>선택</option>
+      </select>
+     </td>
+    </tr>
+
+    <tr>
+     <th>희망분양평형</th>
+     <td colspan="2">
+      <input type="radio" name="family" id="20"><label for="20">20평형</label>
+      <input type="radio" name="family" id="25"><label for="25">25평형</label>
+      <input type="radio" name="family" id="30"><label for="30">30평형</label>
+      <input type="radio" name="family" id="35"><label for="35">35평형</label>
+      <input type="radio" name="family" id="40"><label for="40">40평형 이상</label>
+     </td>
+    </tr>
+   </table>
+   <input type="submit" value="등록" class="btn01">
+  </form>
+ </body>
+</html>

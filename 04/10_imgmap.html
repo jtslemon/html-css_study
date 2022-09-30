@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="ko">
+ <head>
+   <meta charset="utf-8">
+   <title>10_img_map(이미지 맵)</title>
+ </head>
+ <body> 
+    <h2>10_imgmap(이미지맵)</h2>
+    <p>이미지맵이란? 하나의 이미지에 여러개의 맵(사각형, 원형, 다각형)을 만들어서 링크를 걸 수 있는 기능.</p>
+  <p>작성법) map name="맵이름", area shape="rect, circle, poligon" coords="좌표값"</p>
+
+  <img src="./images/total_book.jpg" alt="교보문고 추천도서" usemap="#book">
+  <map name="book">
+    <area shape="rect" coords="9,10,114,153" href="http://www.kyobobook.co.kr/product/detailViewKor.laf?ejkGb=KOR&mallGb=KOR&barcode=9791158711313&orderClick=LAG&Kc=" alt="물이 되는 꿈">
+
+  <area shape="rect" coords="131,11,238,150" href="http://www.kyobobook.co.kr/product/detailViewKor.laf?ejkGb=KOR&mallGb=KOR&barcode=9791160946635&orderClick=LAG&Kc=" alt="마당을 나온 암탉">
+
+ <area shape="rect" coords="250,10,358,155" href="http://www.kyobobook.co.kr/product/detailViewKor.laf?ejkGb=KOR&mallGb=KOR&barcode=9791158463274&orderClick=LAG&Kc=" alt="그 증상, 스트레칭이">
+
+ <area shape="rect" coords="373,12,479,155" href="http://www.kyobobook.co.kr/product/detailViewKor.laf?ejkGb=KOR&mallGb=KOR&barcode=9791188007523&orderClick=LEa&Kc=" alt="오늘도 화내고">
+</map>
+ </body>
+</html>
